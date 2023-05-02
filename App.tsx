@@ -1,7 +1,11 @@
 import {Image, Text, TextInput, View} from 'react-native';
 import React from 'react';
 
-const Cat = () => {
+type CatProps = {
+  name: string;
+};
+
+const Cat = (props: CatProps) => {
   return (
     <View>
       <Text>Hello, I'm ...</Text>
@@ -33,8 +37,17 @@ const Cat = () => {
           width: 200,
         }}
       />
+      <Text>Hello, I'm {props.name}</Text>
     </View>
   );
 };
 
-export default Cat;
+const Cafe = () => {
+  return (
+    <View>
+      <Cat name="Maru" />
+    </View>
+  );
+};
+
+export default Cafe;
