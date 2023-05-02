@@ -1,4 +1,4 @@
-import {Text, TextInput, View} from 'react-native';
+import {Image, Text, TextInput, View} from 'react-native';
 import React from 'react';
 
 const Cat = () => {
@@ -22,6 +22,16 @@ const Cat = () => {
           borderWidth: 1,
         }}
         defaultValue="Name your!"
+      />
+
+      <Image
+        source={{
+          uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
+        }}
+        style={{
+          height: 200,
+          width: 200,
+        }}
       />
     </View>
   );
